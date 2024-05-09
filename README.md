@@ -86,3 +86,7 @@ while value.lower() != "exit":
         display_lcd(value)
 ```
 
+
+
+
+Je vous remercie pour votre attention, ainsi que pour votre temps ! 
