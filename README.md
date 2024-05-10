@@ -26,7 +26,7 @@ def display_lcd(input_digits):
        print(row_display)
 ```
 Cette fonction...
-* Lance la boucle `for` qui se répète trois fois. Le nombre 3 correspond au nombre de lignes dans la représentation LCD d'un chiffre
+* Lance la boucle `for` qui se répète trois fois. Le nombre 3 correspond au nombre de lignes dans la représentation LCD d'un chiffre.
   
 * Initialise une chaîne de caractères vide `row_display` qui sera utilisée pour construire la représentation LCD de la ligne actuelle.
   
@@ -36,7 +36,7 @@ Cette fonction...
   
 * Récupère la représentation LCD du chiffre actuel à partir du dictionnaire `lcd_digits_dictionary`. Elle utilise `integer_digit` comme clé pour le dictionnaire et `i` comme index pour obtenir la ligne correspondante de la représentation LCD.
   
-* Opère une concaténation la représentation LCD du chiffre actuel à la chaîne `row_display`, suivie d'un espace pour la lisibilité.
+* Opère une concaténation de la représentation LCD du chiffre actuel à la chaîne `row_display`, suivie d'un espace pour la lisibilité.
   
 * Après la fin de la boucle interne, elle affiche la chaîne `row_display`, qui contient la représentation LCD de la ligne actuelle pour tous les chiffres dans `input_digits`. Après les 3 répétitions de la boucle, toutes les lignes du chiffre sont affichées !
 
