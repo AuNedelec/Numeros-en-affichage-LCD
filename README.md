@@ -2,7 +2,6 @@
 
 La consigne pour la réalisation de ce test technique était la suivante : 
 
-
 >Écrivez un petit programme qui prend des numéros en entrée et qui les imprime sous format display LCD (la console ou formulaire web). Vous pouvez voir un exemple en dessous.
 Vous pouvez le faire dans le langage de programmation de votre choix, de la manière qui vous convient le mieux.
 ```
@@ -11,6 +10,45 @@ Vous pouvez le faire dans le langage de programmation de votre choix, de la mani
  ||_  _|  | _||_|  ||_| _|
 ```
 J'ai choisi d'utiliser Python, de stocker chaque chiffre et leur représentation LCD dans un dictionnaire et de créer une fonction afin d'afficher la représentation LCD des chiffres en input. J'ai également ajouté une boucle `while`.
+
+---
+
+## Fonction principale : Afficher des chiffres au format LCD
+
+```python
+def display_lcd(input_digits):
+   for i in range(3):
+       row_display = ""
+       for d in input_digits:
+           integer_digit = int(d)
+           lcd_representation = lcd_digits_dic[integer_digit][i]
+           row_display += lcd_representation + " "
+       print(row_display)
+```
+Cette fonction...
+* Lance la boucle `for` qui se répète trois fois. Le nombre 3 correspond au nombre de lignes dans la représentation LCD d'un chiffre
+  
+* Initialise une chaîne de caractères vide `row_display` qui sera utilisée pour construire la représentation LCD de la ligne actuelle.
+  
+* Commence une autre boucle qui parcourt chaque chiffre dans la chaîne `input_digits`.
+  
+* Convertit le chiffre actuel (qui est une chaîne de caractères) en un entier `int`.
+  
+* Récupère la représentation LCD du chiffre actuel à partir du dictionnaire `lcd_digits_dictionary`. Elle utilise `integer_digit` comme clé pour le dictionnaire et `i` comme index pour obtenir la ligne correspondante de la représentation LCD.
+  
+* Opère une concaténation la représentation LCD du chiffre actuel à la chaîne `row_display`, suivie d'un espace pour la lisibilité.
+  
+* Après la fin de la boucle interne, elle affiche la chaîne `row_display`, qui contient la représentation LCD de la ligne actuelle pour tous les chiffres dans `input_digits`. Après les 3 répétitions de la boucle, toutes les lignes du chiffre sont affichées !
+
+
+
+L'input est défini par l'utilisateur, dans la console :
+```python
+value = input("Entrez un numéro pour l'afficher au format display LCD. Pour sortir, entrez \"exit\" : ")
+```
+
+---
+
 
 ## Pourquoi utiliser un dictionnaire ?
 
@@ -52,6 +90,8 @@ lcd_digits_dictionary = {
 }
 ```
 
+---
+
 ## Pourquoi ajouter une boucle `while` ?
 ```python
 while value.lower() != "exit":
@@ -86,7 +126,6 @@ while value.lower() != "exit":
         display_lcd(value)
 ```
 
-
-
+---
 
 Je vous remercie pour votre attention, ainsi que pour votre temps ! 
