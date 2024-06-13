@@ -37,7 +37,7 @@ while value.lower() != "exit":
     if not value.isdigit():
         print("Désolé, je ne comprends que les nombres et le mot \"exit\". Veuillez réessayer.")
     else:
-        display_lcd(value)  # Pass the input_digits variable as an argument
+        display_lcd(value)
     value = input("Entrez un numéro pour l'afficher au format display LCD. Pour sortir, entrez \"exit\" : ")
        
 print("Merci et au-revoir !")
